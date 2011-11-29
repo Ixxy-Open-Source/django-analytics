@@ -7,5 +7,10 @@ setup(name='django-analytics',
       author='Andy Baker',
       author_email='andy@andybak.net',
       packages=find_packages(),
+      package_data={
+          'analytics': [
+            'templates/*.html',
+          ]
+      },
       include_package_data=True,
 )
