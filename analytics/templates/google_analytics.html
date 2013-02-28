@@ -1,5 +1,9 @@
 <script type="text/javascript">
     var _gaq = _gaq || [];
+    {% if analytics_use_enhanced %}
+    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+    {% endif %}
     _gaq.push(['_setAccount', '{{ analytics_id }}']);
     _gaq.push(['_trackPageview']);
 
