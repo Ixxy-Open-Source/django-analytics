@@ -20,7 +20,8 @@
 
     (function($) {
         $(function() {
-            $('a[href^="http"]:not([href*="' + document.domain + '"])').click(function(e) {
+            var domain = document.domain.replace('www.', '').replace('test', '');
+            $('a[href^="http"]:not([href*="' + domain + '"])').click(function(e) {
 
                 // When a user clicks an external link
                 if ($(this).attr('target') !== '_blank') {
