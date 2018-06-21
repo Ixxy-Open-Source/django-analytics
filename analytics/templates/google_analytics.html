@@ -5,6 +5,7 @@
     _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
     {% endif %}
     _gaq.push(['_setAccount', '{{ analytics_id }}']);
+    _gaq.push (['_gat._anonymizeIp']);
     _gaq.push(['_trackPageview']);
 
     (function() {
